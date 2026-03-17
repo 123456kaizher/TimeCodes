@@ -1,6 +1,5 @@
 {
-    "name": "pxt-bt-clock-tm1637",
-    "description": "BT Clock with 4-Digit Tube Support",
+    "name": "Bluetooth Clock",
     "dependencies": {
         "core": "*",
         "bluetooth": "*",
@@ -17,4 +16,6 @@
         }
     }
 }
+
+
 
