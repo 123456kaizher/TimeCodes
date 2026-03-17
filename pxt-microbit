@@ -1,0 +1,17 @@
+{
+    "name": "pxt-bt-clock",
+    "dependencies": {
+        "core": "*",
+        "bluetooth": "*",
+        "microbit": "*"
+    },
+    "files": [
+        "main.ts",
+        "README.md"
+    ],
+    "pxt-microbit": {
+        "bluetooth": {
+            "pairingMode": "none"
+        }
+    }
+}
