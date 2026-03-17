@@ -1,3 +1,6 @@
+/**
+ * BT Clock Extension
+ */
 //% color="#0060AD" icon="\uf017" block="BT Clock"
 namespace btClock {
     let _hours = 0
@@ -5,11 +8,6 @@ namespace btClock {
     let _lastSync = 0
     let _display: TM1637.TM1637LED = null
 
-    /**
-     * Initialize the 4-digit tube on specific pins.
-     * @param clk Clock pin, eg: DigitalPin.P1
-     * @param dio Data pin, eg: DigitalPin.P2
-     */
     //% block="setup 4-digit display CLK %clk DIO %dio"
     export function setupDisplay(clk: DigitalPin, dio: DigitalPin) {
         _display = TM1637.create(clk, dio, 7, 4)
@@ -33,7 +31,7 @@ namespace btClock {
     function refreshDisplay() {
         if (_display) {
             _display.showNumber((_hours * 100) + _minutes)
-            _display.showDP(1, true) // Show the colon
+            _display.showDP(1, true)
         }
     }
 
@@ -58,6 +56,7 @@ namespace btClock {
         }
     }
 }
+
 
 
 
